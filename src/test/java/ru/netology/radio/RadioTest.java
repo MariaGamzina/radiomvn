@@ -7,6 +7,16 @@ public class RadioTest {
 
 
     @Test
+    public void testConstr() {
+        Radio rad = new Radio(10);
+
+        Assertions.assertEquals(0, rad.getMinNumberStation());
+        Assertions.assertEquals(8, rad.getMaxNumberStation());
+        Assertions.assertEquals(0, rad.getNumberStation());
+    }
+
+
+    @Test
     public void shouldSetNextStationIfZero() {
         Radio rad = new Radio();
 
