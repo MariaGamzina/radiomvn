@@ -17,6 +17,10 @@ public class Radio {
 
     }
 
+    public Radio() {
+
+    }
+
 
     public int getMaxNumberStation() {
       return maxNumberStation;
