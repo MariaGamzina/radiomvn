@@ -23,12 +23,12 @@ public class Radio {
 
 
     public int getMaxNumberStation() {
-      return maxNumberStation;
-  }
+        return maxNumberStation;
+    }
 
-  public int getMinNumberStation() {
-      return minNumberStation;
-  }
+    public int getMinNumberStation() {
+        return minNumberStation;
+    }
 
     public int getNumberStation() {
         return numberStation;
@@ -45,11 +45,11 @@ public class Radio {
     }
 
     public int getMaxVolume() {
-      return maxVolume;
+        return maxVolume;
     }
 
     public int getMinVolume() {
-      return minVolume;
+        return minVolume;
     }
 
     public int getVolume() {
