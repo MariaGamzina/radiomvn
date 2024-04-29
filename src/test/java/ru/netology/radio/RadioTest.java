@@ -175,7 +175,7 @@ public class RadioTest {
     public void shouldNotSetWrongStation() {
         Radio rad = new Radio();
 
-        rad.setNumberStation(rad.getMaxNumberStation()+10);
+        rad.setNumberStation(rad.getMaxNumberStation() + 10);
 
         int expectedWrongStation = rad.getMinNumberStation();
         int actualWrongStation = rad.getNumberStation();
