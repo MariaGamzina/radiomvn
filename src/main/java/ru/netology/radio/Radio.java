@@ -1,37 +1,31 @@
 package ru.netology.radio;
 
 public class Radio {
-    private int numberStation;
-    private int volume;
 
-    public void increaseVolume() {
-        if (volume < 100) {
-            volume++;
-        } else {
-            volume = 100;
-        }
+    private int maxNumberStation = 9;
+    private int minNumberStation = 0;
+    private int numberStation = minNumberStation;
+    private int maxVolume = 100;
+    private int minVolume = 0;
+    private int volume = minVolume;
+
+
+    public Radio(int size) {
+        maxNumberStation = minNumberStation + size - 1;
+
     }
 
-    public void turnDownVolume() {
-        if (volume > 0) {
-            volume--;
-        } else {
-            volume = 0;
-        }
+    public Radio() {
+
     }
 
-    public int getVolume() {
-        return volume;
+
+    public int getMaxNumberStation() {
+        return maxNumberStation;
     }
 
-    public void setVolume(int newVolume) {
-        if (newVolume > 100) {
-            return;
-        }
-        if (newVolume < 0) {
-            return;
-        }
-        volume = newVolume;
+    public int getMinNumberStation() {
+        return minNumberStation;
     }
 
     public int getNumberStation() {
@@ -39,28 +33,67 @@ public class Radio {
     }
 
     public void setNumberStation(int newNumberStation) {
-        if (newNumberStation > 9) {
+        if (newNumberStation > maxNumberStation) {
             return;
         }
-        if (newNumberStation < 0) {
+        if (newNumberStation < minNumberStation) {
             return;
         }
         numberStation = newNumberStation;
     }
 
+    public int getMaxVolume() {
+        return maxVolume;
+    }
+
+    public int getMinVolume() {
+        return minVolume;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int newVolume) {
+        if (newVolume > maxVolume) {
+            return;
+        }
+        if (newVolume < minVolume) {
+            return;
+        }
+        volume = newVolume;
+    }
+
+
+    public void increaseVolume() {
+        if (volume < maxVolume) {
+            volume++;
+        } else {
+            volume = maxVolume;
+        }
+    }
+
+    public void turnDownVolume() {
+        if (volume > minVolume) {
+            volume--;
+        } else {
+            volume = minVolume;
+        }
+    }
+
 
     public void setNextStation() {
-        if (numberStation < 9) {
+        if (numberStation < maxNumberStation) {
             numberStation++;
         } else {
-            numberStation = 0;
+            numberStation = minNumberStation;
         }
 
     }
 
     public void setPrevStation() {
-        if (numberStation == 0) {
-            numberStation = 9;
+        if (numberStation == minNumberStation) {
+            numberStation = maxNumberStation;
         } else {
             numberStation--;
         }
