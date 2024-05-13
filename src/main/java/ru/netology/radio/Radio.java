@@ -9,7 +9,7 @@ public class Radio {
     private int minVolume = 0;
     private int volume = minVolume;
 
-
+    
     public Radio(int size) {
         maxNumberStation = minNumberStation + size - 1;
 
