@@ -10,8 +10,6 @@ public class Radio {
     private int volume = minVolume;
 
 
-
-
     public Radio(int size) {
         maxNumberStation = minNumberStation + size - 1;
 
@@ -23,12 +21,12 @@ public class Radio {
 
 
     public int getMaxNumberStation() {
-      return maxNumberStation;
-  }
+        return maxNumberStation;
+    }
 
-  public int getMinNumberStation() {
-      return minNumberStation;
-  }
+    public int getMinNumberStation() {
+        return minNumberStation;
+    }
 
     public int getNumberStation() {
         return numberStation;
@@ -45,11 +43,11 @@ public class Radio {
     }
 
     public int getMaxVolume() {
-      return maxVolume;
+        return maxVolume;
     }
 
     public int getMinVolume() {
-      return minVolume;
+        return minVolume;
     }
 
     public int getVolume() {
@@ -82,10 +80,6 @@ public class Radio {
             volume = minVolume;
         }
     }
-
-
-
-
 
 
     public void setNextStation() {
