@@ -10,8 +10,6 @@ public class Radio {
     private int volume = minVolume;
 
 
-
-
     public Radio(int size) {
         maxNumberStation = minNumberStation + size - 1;
 
@@ -82,10 +80,6 @@ public class Radio {
             volume = minVolume;
         }
     }
-
-
-
-
 
 
     public void setNextStation() {
